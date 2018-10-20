@@ -65,6 +65,10 @@ With the below code we will read the data sent by Kafka Consumer & Spark will ac
 
 // Console 2 - Open 2nd shell & run the below code. Don't do that in first shell itself. As Kafka commands are already written in first shell
 
+// Start Spark Shell using below command & before that download spark-streaming-kafka-assembly_2.10-1.6.0.jar.
+
+	spark-shell --master local[2] --conf "spark.dynamicAllocation.enabled=false" --jars /home/support1161/spark-streaming-kafka-assembly_2.10-1.6.0.jar
+	
 // For complete code refer creditcard.scala
 
 1. Import packages
