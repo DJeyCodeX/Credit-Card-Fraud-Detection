@@ -105,7 +105,7 @@ With the below code we will read the data sent by Kafka Consumer & Spark will ac
 
 // After typing ssc.start() when hits enter, now we need to start the consumer which we have already created in kafka 
 **********
-![alt text](images/image10.png)
+![alt text](images/mage10.png)
 
 ----------------------------------------------------------
 
