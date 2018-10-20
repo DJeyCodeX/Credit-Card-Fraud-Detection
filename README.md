@@ -125,23 +125,28 @@ Console 3 - Open 3rd Shell & start with Hive
 
 Problem Statement 1: Select all the Merchant_id from dataset which are found to be fraud
 **************
-![alt text](images/image11.png)
+
+	Select distinct(Merchant_id) from creditcard2 where isFradulent = 'Y';
 
 Problem Statement 2: Select all the Merchant_id whose transactions are declined
 **************
-![alt text](images/image12.png)
+
+	Select distinct(Merchant_id) from creditcard2 where Is_declined = 'Y';
 
 Problem Statement 3: Find the total transactional amount based on merchant id
 **************
-![alt text](images/image13.png)
+
+	Select Merchant_id, sum(Transaction_amount) from creditcard2 group by Merchant_id;
 
 Problem Statement 4: Find the total six month average amount based on each merchant id which are found to be fraud
 **************
-![alt text](images/image14.png)
+
+	Select Merchant_id, sum(six_month_avg_chbk_amt),isFradulent from creditcard2 where isFradulent='Y' group by Merchant_id,isFradulent;
 
 Problem Statement 5: Based on each merchant id find the total average amount per day which are declined by the bank
 **************
-![alt text](images/image15.png)
+
+	Select Merchant_id, SUM(Average_Amount_transaction_day) from creditcard2 where Is_declined = 'Y' group by Merchant_id, Is_declined;
 
 
 ## Hence concluded with Fraud detection  
